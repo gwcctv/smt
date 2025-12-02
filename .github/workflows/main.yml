@@ -3,10 +3,7 @@ name: Execute smt.sh on Schedule
 on:
   schedule:
     - cron: '0 8 * * *'  # 每天UTC时间8点执行
-  push:
-    branches: [ main ]       # 推送代码时也触发（可选）
-  pull_request:
-    branches: [ main ]        # PR时触发（可选）
+  workflow_dispatch:  
 
 jobs:
   execute-script:
